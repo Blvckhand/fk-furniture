@@ -1,0 +1,258 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+nav {
+    margin: 4em;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 4.0em;
+    margin: 0%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    position: relative;
+}
+
+nav ul li a.active:before {
+    position: absolute;
+    content: "";
+    width: 35%;
+    height: 1px;
+    border-bottom: 2px solid black;
+    bottom: -6px;
+}
+
+nav ul li a::before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1px;
+    border-bottom: 2px solid gray;
+    bottom: -6px;
+    transform: width .3s;
+}
+
+main {
+    display: flex;
+    gap: 8em;
+    margin-top: 11em;
+}
+
+.left {
+    width: 45%;
+}
+
+.right {
+    flex-grow: 1;
+}
+
+h1 {
+    font-size: 5.2rem;
+    font-family: 'playfair display';
+    font-weight: normal;
+    margin: 0;
+}
+
+.subhead {
+    font-size: 1.9rem;
+}
+
+.act-bottons {
+    margin: 3em 0;
+}
+
+.act-botton {
+    display: flex;
+    gap: 3em;
+}
+
+.primary-act {
+    background-color: antiquewhite;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    border-radius: 1.9em;
+    padding: 1em 2em;
+    margin-bottom: 50px;
+}
+
+.secondary-act {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 1em 0;
+    transition: transform .3s;
+    
+}
+
+ .blog {
+    display: flex;
+    gap: 3em;
+    padding: 5em;
+    border: 1px solid black;
+    border-radius: .8em;
+    position: relative;
+
+ }
+
+ p.employees {
+    font-size: 3.3rem;
+    margin: 0;
+    font-weight: 200;
+    line-height: 100%;
+ }
+
+ p.news {
+    font-size: 1.5rem;
+    margin: 0;
+ }
+
+
+ .right {
+    display: grid;
+    gap: 2.3em;
+    grid-template-columns: repeat(2,auto);
+    grid-template-areas: 
+    "left ." 
+    "left .";
+ }
+
+ .card {
+    border-radius: .8em;
+    padding: 1.2em;
+    display: flex;
+    align-items: start;
+    background-size: 125%;
+    transition: background-size 800ms;
+ }
+
+ .card1 {
+    grid-area: left;
+    background-image: url('../images/photo-1570126688035-1e6adbd61053.jpeg');
+    position: relative;
+    background-repeat: no-repeat;
+ }
+.card1::before {
+    position: absolute;
+    content: "";
+    background: url('../images/tag.svg') no-repeat;
+    width: 80%;
+    height: 80%;
+    top: 20px;
+    left: -120px;
+    pointer-events: none;
+}
+ .card2 {
+    background-image: url('../images/office.jpeg');
+    background-repeat: no-repeat;
+ }
+
+ .card3 {
+    background-image: url('../images/round\ comfort.jpeg');
+    background-repeat: no-repeat;
+ }
+
+ .card-details {
+    background: whitesmoke;
+    border-radius: .6em;
+    padding: 1.6rem;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 800ms;
+    
+
+ }
+
+ .card-details a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+ }
+
+ .card-details p {
+    font-size: 1.3rem;
+    margin: 0%;
+ }
+
+ p.product-price {
+    font-size: 1.8rem;
+ }
+
+ nav ul li a:hover::before {
+    width: 35%;
+ }
+
+ .primary-act:hover {
+    background: #e2d1bd;
+ }
+
+ .secondary-act:hover {
+    text-decoration: underline;
+ }
+
+ .card:hover {
+    background-size: 150%;
+ }
+
+ .card:hover .card-details {
+    transform: translateY(-20px);
+ }
+
+ .overlay {
+    position: absolute;
+    z-index: 999;
+    background: white;
+    width: 100%;
+    height: 100%;
+    animation: reveal 1s ease-in forwards;
+    transform-origin: bottom;
+ }
+
+ @keyframes reveal {
+    from {
+        transform: scaleY(1);
+    }
+    to {
+        transform: scaleY(0);
+    }
+ }
+ main {
+    animation: growIn 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    transform: scale(.4);
+ }
+
+ @keyframes growIn {
+    to {
+        transform: scale(1);
+    }
+ }
